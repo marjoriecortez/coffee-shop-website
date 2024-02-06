@@ -1,6 +1,6 @@
 /* Google Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"); /* Protest Riot */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Riot&display=swap"); /*Lato*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap'); /* Protest Riot */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Riot&display=swap'); /*Lato*/
 
 * {
   margin: 0;
@@ -8,11 +8,15 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 :root {
-  --dark-color: #5a4032;
+  --dark-color: #221c19;
   --main-color: #ddbea9;
+  --base-color: #b67a52;
   --bg-color: #faf3ee;
 
   /* Box Shadow */
@@ -38,7 +42,6 @@ header {
 }
 .navbar {
   display: flex;
-  font-family: "Lato", sans-serif;
 }
 .navbar a {
   color: var(--bg-color);
@@ -54,10 +57,10 @@ header {
   transition: 0.2s all linear;
 }
 .logo img {
-  width: 70px;
+  width: 60px;
 }
 .header-icon {
-  font-size: 30px;
+  font-size: 23px;
   display: flex;
   column-gap: 2rem;
   z-index: 10000;
@@ -87,6 +90,50 @@ header {
   outline: none;
   padding: 20px;
   font-size: 1rem;
-  font-family: "Protest Riot", sans-serif;
   font-weight: 400;
+}
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  padding: 20px 70px;
+}
+
+.home-text h1 {
+  text-transform: uppercase;
+  color: var(--base-color);
+  font-weight: 900;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+}
+
+.home-text p {
+  color: var(--bg-color);
+  width: 70%;
+  margin: 10px 0 30px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.home-img img {
+  width: 650px;
+}
+
+.btn {
+  color: var(--bg-color);
+  background-color: var(--base-color);
+  border-radius: 0.4rem;
+  padding: 10px 50px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background: rgb(182, 105, 53);
 }

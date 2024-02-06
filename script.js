@@ -1,5 +1,6 @@
-const search = document.querySelector(".search-box");
+const searchBox = document.querySelector('.search-box');
+const searchIcon = document.querySelector('#search-icon');
 
-document.addEventListener("click", function () {
-  search.classList.toggle("active");
+searchIcon.addEventListener('click', function () {
+  searchBox.classList.toggle('active');
 });
