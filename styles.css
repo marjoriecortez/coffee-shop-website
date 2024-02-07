@@ -20,7 +20,7 @@
   --bg-color: #faf3ee;
 
   /* Box Shadow */
-  --box-shadow: ;
+  --box-shadow: 2px 2px 10px 5px rgba(68, 67, 66, 0.2);
 }
 
 header {
@@ -82,7 +82,6 @@ header {
   left: 50%;
   top: -100%;
   width: 100%;
-  background: var(--bg-color);
 }
 .search-box input {
   width: 100%;
@@ -91,6 +90,8 @@ header {
   padding: 20px;
   font-size: 1rem;
   font-weight: 400;
+  background: var(--bg-color);
+  color: var(--dark-color);
 }
 .home {
   min-height: 100vh;
@@ -120,9 +121,12 @@ header {
   text-align: justify;
   font-weight: 400;
 }
-
+.home-img {
+  padding: 150px 0;
+}
 .home-img img {
-  width: 650px;
+  width: 580px;
+  border-radius: 10px;
 }
 
 .btn {
@@ -145,8 +149,8 @@ header {
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
   gap: 4rem;
-  padding: 10px 200px;
-  margin: 50px 0;
+  padding: 70px 200px 0;
+  margin-top: 30px;
 }
 .about-text {
   color: var(--dark-color);
@@ -161,4 +165,70 @@ header {
   font-size: 1rem;
   font-weight: 400;
   margin: 20px 0;
+}
+.heading {
+  text-align: center;
+}
+.heading h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.products {
+  padding-top: 100px;
+}
+.products-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  gap: 2rem;
+  margin: 50px 150px;
+}
+.products-container .box {
+  position: relative;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  text-transform: uppercase;
+}
+.products-container .box img {
+  width: 200px;
+  margin: auto;
+  border-radius: 5px;
+}
+.products-container .box h3 {
+  font-weight: 900;
+  margin: 8px 0;
+  text-align: center;
+}
+.products-container .box .products-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.products-container .box .products-text span {
+  background: var(--base-color);
+  color: var(--bg-color);
+  padding: 5px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.products-container .box .products-text a {
+  border: 3px solid var(--base-color);
+  padding: 2px 17px;
+  color: var(--base-color);
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.products-container .box .products-text a:hover {
+  background: var(--base-color);
+  color: var(--bg-color);
+  transition: 0.2s all linear;
 }
