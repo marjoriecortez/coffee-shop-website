@@ -34,11 +34,18 @@ header {
   align-items: center;
   padding: 18px 100px;
   transition: 0.5s linear;
+}
+header.shadow {
   background: var(--dark-color);
+  box-shadow: var(--box-shadow);
 }
 
 #menu-icon {
   display: none;
+  color: var(--bg-color);
+  font-size: 23px;
+  z-index: 10001;
+  cursor: pointer;
 }
 .navbar {
   display: flex;
@@ -102,7 +109,7 @@ header {
   background-position: center;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
   padding: 20px 70px;
 }
 
@@ -116,16 +123,13 @@ header {
 
 .home-text p {
   color: var(--bg-color);
-  width: 70%;
+  width: 85%;
   margin: 10px 0 30px;
   text-align: justify;
   font-weight: 400;
 }
-.home-img {
-  padding: 150px 0;
-}
 .home-img img {
-  width: 580px;
+  width: 500px;
   border-radius: 10px;
 }
 
@@ -179,6 +183,7 @@ header {
 }
 .products-container {
   display: grid;
+  justify-content: center;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
   gap: 2rem;
@@ -201,9 +206,10 @@ header {
   border-radius: 5px;
 }
 .products-container .box h3 {
-  font-weight: 900;
+  font-weight: 700;
   margin: 8px 0;
   text-align: center;
+  font-size: 1.1rem;
 }
 .products-container .box .products-text {
   display: flex;
@@ -217,6 +223,7 @@ header {
   padding: 5px 20px;
   font-weight: 600;
   border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 .products-container .box .products-text a {
@@ -225,10 +232,157 @@ header {
   color: var(--base-color);
   font-weight: 600;
   border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 .products-container .box .products-text a:hover {
   background: var(--base-color);
   color: var(--bg-color);
   transition: 0.2s all linear;
+}
+.customers {
+  padding-top: 100px;
+}
+.customers-text h2 {
+  text-transform: uppercase;
+  font-size: rem;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+}
+.customers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  gap: 2rem;
+  margin: 50px 150px;
+}
+.customers-container .box {
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+}
+.customers-container .box:hover {
+  background: var(--bg-color);
+}
+.customers-container .box .stars {
+  margin-bottom: 10px;
+}
+.customers-container .box .stars .bx {
+  color: var(--base-color);
+  font-size: 20px;
+}
+.customers-container .box p {
+  font-size: 1rem;
+}
+.customers-container .box h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.customers-container .box img {
+  border-radius: 50%;
+  width: 80px;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+  gap: 2rem;
+  margin: 20px 70px;
+}
+.footer .box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.footer .box p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.social a .bx {
+  font-size: 1.5rem;
+  background: var(--main-color);
+  color: var(--dark-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+.social a .bx:hover {
+  color: var(--bg-color);
+  background: var(--base-color);
+  transition: 0.2s all linear;
+}
+.footer li a {
+  color: var(--dark-color);
+  line-height: 25px;
+}
+.footer li a:hover {
+  color: var(--base-color);
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.contact span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contact span .bx {
+  font-size: 1.3rem;
+}
+.copyright {
+  background: var(--bg-color);
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+@media (max-width: 1320px) {
+  .home {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 1110px) {
+  .home-text h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  .home-img img {
+    width: 400px;
+  }
+  .about {
+    padding: 30px 50px;
+  }
+}
+@media (max-width: 800px) {
+  .navbar a {
+    font-size: 0.8;
+    padding: 0 10px;
+  }
+  .home-img img {
+    width: 350px;
+  }
+  .home-text h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 740px) {
+  #menu-icon {
+    display: initial;
+  }
+  .navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
